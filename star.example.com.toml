@@ -1,0 +1,6 @@
+# HTTPS certificates
+[[tls]]
+  entryPoints = ["https"]
+  [tls.certificate]
+    certFile = "/pki/star.example.com.crt+chain"
+    keyFile = "/pki/star.key"
