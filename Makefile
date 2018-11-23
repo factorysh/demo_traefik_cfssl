@@ -21,7 +21,7 @@ docker-build: star
 	docker-compose build
 
 up:
-	docker-compose up -d mirror demo.example.com
+	docker-compose up -d mirror mirror.demo.example.com
 	docker-compose ps
 
 client:

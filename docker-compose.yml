@@ -4,9 +4,9 @@ services:
   mirror:
     image: bearstech/http-mirror
     labels:
-      traefik.frontend.rule: Host:demo.example.com
+      traefik.frontend.rule: Host:mirror.demo.example.com
 
-  demo.example.com:
+  mirror.demo.example.com:
     image: traefik:1.7.4
     expose:
       - 80
@@ -17,13 +17,13 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./pki/star-key.pem:/pki/star-key.pem
       - ./pki/star.example.com.crt+chain:/pki/star.example.com.crt+chain
-      - ./star.example.com.toml:/etc/traefik.d/star.example.com.toml
+      - ./star.example.com.toml:/etc/traefiki/conf.d/star.example.com.toml
 
   client:
     links:
-      - demo.example.com
+      - mirror.demo.example.com
     build:
       dockerfile: Dockerfile.client
       context: .
-    command: curl -vs https://demo.example.com
+    command: curl -vs https://mirror.demo.example.com
     
