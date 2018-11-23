@@ -22,7 +22,7 @@ logLevel = "DEBUG"
 # Optional
 # Default: ["http"]
 #
-# defaultEntryPoints = ["http", "https"]
+defaultEntryPoints = ["http", "https"]
 
 ################################################################
 # Entrypoints configuration
@@ -37,6 +37,7 @@ logLevel = "DEBUG"
     address = ":80"
     [entryPoints.https]
     address = ":443"
+    [entryPoints.https.tls]
     minVersion = "VersionTLS12"
 
 ################################################################
