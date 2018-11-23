@@ -17,7 +17,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./pki/star-key.pem:/pki/star-key.pem
       - ./pki/star.example.com.crt+chain:/pki/star.example.com.crt+chain
-      - ./star.example.com.toml:/etc/traefiki/conf.d/star.example.com.toml
+      - ./star.example.com.toml:/etc/traefik/conf.d/star.example.com.toml
 
   client:
     links:
