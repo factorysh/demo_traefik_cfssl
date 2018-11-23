@@ -1,0 +1,18 @@
+{
+    "CN": "demo.example.com",
+    "hosts": [
+        "alice.example.com",
+        "*.demo.example.com"
+    ],
+    "key": {
+        "algo": "ecdsa",
+        "size": 256
+    },
+    "names": [
+        {
+            "C": "FR",
+            "ST": "Paris",
+            "OU": "Factory"
+        }
+    ]
+}
