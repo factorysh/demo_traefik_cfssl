@@ -29,3 +29,6 @@ client:
 
 down:
 	docker-compose down
+
+clean:
+	rm -rf pki/*.pem pki/*.csr pki/*.crt+chain
