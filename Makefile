@@ -34,5 +34,8 @@ test: | docker-build up
 down:
 	docker-compose down
 
-clean:
+clean: clean-docker
 	rm -rf pki/*.pem pki/*.csr pki/*.crt+chain
+
+clean-docker: down
+	docker rmi demo_traefik_cfssl_client
