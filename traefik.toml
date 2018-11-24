@@ -38,9 +38,6 @@ defaultEntryPoints = ["http", "https"]
     [entryPoints.https]
     address = ":443"
     [entryPoints.https.tls]
-    [entryPoints.https.tls.defaultCertificate]
-        certFile = "/pki/star.example.com.crt+chain"
-        keyFile = "/pki/star-key.pem"
 
 ################################################################
 # Traefik logs configuration
@@ -160,5 +157,5 @@ defaultEntryPoints = ["http", "https"]
 # exposedByDefault = true
 
 [file]
-  #directory = "/etc/traefik/conf.d/"
+  directory = "/etc/traefik/conf.d/"
   watch = false
