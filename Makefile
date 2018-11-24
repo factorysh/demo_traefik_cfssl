@@ -27,6 +27,8 @@ up: star
 client:
 	docker-compose up client
 
+test: | docker-build up client
+
 down:
 	docker-compose down
 
