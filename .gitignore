@@ -1,2 +1,3 @@
 pki/*.csr
 pki/*.pem
+pki/*.crt+chain
