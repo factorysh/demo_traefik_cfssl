@@ -40,6 +40,7 @@ defaultEntryPoints = ["http", "https"]
     [entryPoints.https]
     address = ":443"
     [entryPoints.https.tls]
+        minVersion = "VersionTLS12"
 
 ################################################################
 # Traefik logs configuration
