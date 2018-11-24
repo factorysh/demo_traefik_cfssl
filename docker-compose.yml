@@ -23,7 +23,6 @@ services:
     links:
       - mirror.demo.example.com
     build:
-      dockerfile: Dockerfile.client
       context: .
     command: curl -vs https://mirror.demo.example.com
-    
+
