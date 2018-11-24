@@ -5,8 +5,8 @@
         "*.demo.example.com"
     ],
     "key": {
-        "algo": "rsa",
-        "size": 2048
+        "algo": "ecdsa",
+        "size": 256
     },
     "names": [
         {
