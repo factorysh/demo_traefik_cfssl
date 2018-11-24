@@ -35,6 +35,8 @@ defaultEntryPoints = ["http", "https"]
 [entryPoints]
     [entryPoints.http]
     address = ":80"
+    [entryPoints.traefik]
+    address = ":8080"
     [entryPoints.https]
     address = ":443"
     [entryPoints.https.tls]
@@ -104,7 +106,7 @@ defaultEntryPoints = ["http", "https"]
   # Optional
   # Default: "traefik"
   #
-  # entryPoint = "traefik"
+  entryPoint = "traefik"
 
   # Enabled Dashboard
   #
@@ -112,6 +114,7 @@ defaultEntryPoints = ["http", "https"]
   # Default: true
   #
   # dashboard = false
+  dashboard = true
 
 ################################################################
 # Ping configuration
