@@ -13,14 +13,14 @@ pki/star.pem: pki/ca.pem
 
 pki/star.example.com.crt+chain: pki/star.pem
 	cd pki && \
-	cat ca.pem star.pem > star.example.com.crt+chain
+	cat star.pem ca.pem > star.example.com.crt+chain
 
 star: pki/star.example.com.crt+chain
 
 docker-build: star
 	docker-compose build
 
-up:
+up: star
 	docker-compose up -d mirror mirror.demo.example.com
 	docker-compose ps
 
