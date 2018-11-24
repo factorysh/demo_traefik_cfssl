@@ -27,7 +27,9 @@ up: star
 client:
 	docker-compose up client
 
-test: | docker-build up client
+test: | docker-build up
+	sleep 3
+	make client
 
 down:
 	docker-compose down
